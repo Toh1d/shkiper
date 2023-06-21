@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="burger__menu">
+                <nav class="burger__nav">
+                    <ul class="burger__items">
+                        <li class="burger__item"><a href="/" class="burger__item-link">Главная</a></li>
+                        <li class="burger__item"><a href="/menu" class="burger__item-link">Меню</a></li>
+                        <li class="burger__item"><a href="/banquet" class="burger__item-link">Банкет</a></li>
+                        <li class="burger__item"><a href="/discount" class="burger__item-link">Акции</a></li>
+                        <li class="burger__item"><a href="/about" class="burger__item-link">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="burger">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+            </div>
+            <div class="page__header">
+                <div class="header__container __container">
+                    <div class="header__inner">
+                        <nav class="nav">
+                            <ul class="header__items">
+                                <li class="header__item">
+                                    <a href="/" class="header__item-link">Главная</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="/menu" class="header__item-link">Меню</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="/banquet" class="header__item-link">Банкеты</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="/discount" class="header__item-link">Акции</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="/about" class="header__item-link">О нас</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+			<div class="modal__window hidden">
+				<div class="modal modal__fixed">
+                    <div class="form__inner">
+                        <div class="form__body">
+                            <div data-close class="modal__close">&times;</div>
+                            <div class="form__title"><h2 class="form__title-text">Бесплатный заказ столика</h2></div>
+                            <div class="form__subtitle"><p class="form__subtitle-text">В кафе Шкипер</p></div>
+<!--                            <div class="form__wraning">Требуется депозит от 6 чел. — предзаказ и предоплата 5000 руб.</div>-->
+                            <form action="#" class="form createForm">
+                                <div class="form__header">
+                                    <select name="personCount" class="form__neader-select-persone">
+                                        <option value="1">на 1 человека</option>
+                                        <option value="2">на 2 человека</option>
+                                        <option value="3">на 3 человека</option>
+                                        <option selected="selected" value="4">на 4 человека</option>
+                                        <option value="5">на 5 человек</option>
+                                        <option value="6">на 6 человек</option>
+                                        <option value="7">на 7 человек</option>
+                                        <option value="8">на 8 человек</option>
+                                        <option value="9">на 9 человек</option>
+                                        <option value="10">на 10 человек</option>
+                                        <option value="11">на 11 человек</option>
+                                        <option value="12">на 12 человек</option>
+                                        <option value="13">на 13 человек</option>
+                                        <option value="14">на 14 человек</option>
+                                        <option value="15">на 15 человек</option>
+                                        <option value="16">на 16 человек</option>
+                                        <option value="17">на 17 человек</option>
+                                        <option value="18">на 18 человек</option>
+                                        <option value="19">на 19 человек</option>
+                                        <option value="20">на 20 человек</option>
+                                        <option value="21">на 21 человека</option>
+                                        <option value="22">на 22 человека</option>
+                                        <option value="23">на 23 человека</option>
+                                        <option value="24">на 24 человека</option>
+                                        <option value="25">на 25 человек</option>
+                                    </select>
+                                    <div class="date">
+                                        <div class="date-text">Дата:</div>
+                                        <input type="date" name="date" class="form__neader-input-date" id="date">
+                                    </div>
+                                    <select name="time" class="form__neader-select-time">
+                                        <option value="2023-04-22 10:00:00">10:00</option>
+                                        <option value="2023-04-22 10:30:00">10:30</option>
+                                        <option value="2023-04-22 11:00:00">11:00</option>
+                                        <option value="2023-04-22 11:30:00">11:30</option>
+                                        <option value="2023-04-22 12:00:00">12:00</option>
+                                        <option value="2023-04-22 12:30:00">12:30</option>
+                                        <option value="2023-04-22 13:00:00">13:00</option>
+                                        <option value="2023-04-22 13:30:00">13:30</option>
+                                        <option value="2023-04-22 14:00:00">14:00</option>
+                                        <option value="2023-04-22 14:30:00">14:30</option>
+                                        <option value="2023-04-22 15:00:00">15:00</option>
+                                        <option value="2023-04-22 15:30:00">15:30</option>
+                                        <option value="2023-04-22 16:00:00">16:00</option>
+                                        <option value="2023-04-22 16:30:00">16:30</option>
+                                        <option value="2023-04-22 17:00:00">17:00</option>
+                                        <option value="2023-04-22 17:30:00">17:30</option>
+                                        <option value="2023-04-22 18:00:00">18:00</option>
+                                        <option value="2023-04-22 18:30:00">18:30</option>
+                                        <option value="2023-04-22 19:00:00">19:00</option>
+                                        <option value="2023-04-22 19:30:00">19:30</option>
+                                        <option value="2023-04-22 20:00:00">20:00</option>
+                                        <option value="2023-04-22 20:30:00">20:30</option>
+                                        <option value="2023-04-22 21:00:00">21:00</option>
+                                        <option value="2023-04-22 21:30:00">21:30</option>
+                                        <option value="2023-04-22 22:00:00">22:00</option>
+                                    </select>
+                                </div>
+                                <div class="form__main">
+                                    <div class="form__main-name">Имя:</div>
+                                    <input name="name" class="form__main-input-name name" onkeyup="this.value = this.value.replace(/\d/g,'');" placeholder="Имя Фамилия"required="required" autocomplete="name" type="text">
+                                    <input name="phoneNumber" class="form__main-input-tel phonecleavemask" placeholder="+7 ___ ___-__-__" maxlength="12" type="tel"
+                                     onkeyup="this.value =this.value.replace(/[A-Za-zА-Яа-яЁё]/i, '');" autocomplete="tel" required="required">
+                                    <textarea name="preferences" class="form__main-textarea" placeholder="Пожелания (не обязательно, будут учтены по возможности)" rows="2"></textarea>
+                                </div>
+                                <div class="form__footer" id="form">
+                                    <div class="form__footer-text">
+                                        Бронь будет подтверждена в течение<span title="В рабочие часы заведения">5* минут.</span>
+                                        Если возникнут вопросы - мы вам перезвоним.
+                                    </div>
+                                    <div class="form__footer-btn"><button class="form__footer-button" type="submit">Забронировать столик</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+				</div>
+            </div>
+            <section class="page__main">
+                <div class="main__bg"><img src="./img/main/bg.jpg" alt="img" class="main__bg-img"></div>
+                <div class="main__container __container">
+                    <div class="main__inner">
+                        <div class="main__text"><p class="main__text-cafe">Кафе</p></div>
+                        <div class="main__name"><h1 class="main__name-text">Шкипер</h1></div>
+                        <div class="main__address"><a href="#" class="main__address-link">Великий Новгород, ул. Студенческая, 4</a></div>
+                        <div class="main__working-mode">Режим работы: <span class="working-time">c 10:00 до 23:00</span></div>
+                        <div class="main__price" title="Примерная стоисомть ужина">Средний чек <span class="main__price-value">1 500 руб.</span></div>
+                        <div class="main__icons">
+                            <div class="main__icons-image"><img src="./img/main/main/icons/1.png" alt="img" class="main__icons-img"></div> 
+                            <div class="main__icons-text">VIP</div>
+                            <div class="main__icons-text main__icons-text-par">P</div>
+                        </div>
+                        <div class="main__telephone"><a href="tel:+78162633980" class="main__telephone-link">+7 816 263-39-80</a></div>
+                        <div class="main__button"><a href="#" class="main__button-link">Заказать столик</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__main-slider">
+                <div class="main-slider__container __container">
+                    <div class="main-slider__inner">
+                        <div class="main-slider__content">
+                            <div class="main-slider__title">
+                                <h2 class="main-slider__title-text">Кафе, где вот уже много лет чтят традиции азербайджанской кухни и культуры, а гостей встречают со знаменитым восточным гостеприимством.</h2>
+                            </div>
+                            <div class="main-slider__subtitle">
+                                <p class="main-slider__subtitle-text">
+                                    В кафе «Шкипер» чувствуешь себя как на Востоке. Оригинальная отделка камнем, фонтанчики с прохладной водой, тяжёлые кованые люстры — всё это создаёт атмосферу, в которой забываешь о насущном и предаешься расслабленному отдыху. Здесь хочется поднимать тосты за родных и близких, вместе мечтая о новых свершениях.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="main-slider__slider">
+                            <div class="main-slider__prev-btn">
+                                <img src="./img/main/main-slider/arrow.png" alt="arrow" class="main-slider__btn-img">
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider">
+                                    <img src="./img/main/main-slider/1.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/2.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/3.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/4.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/6.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/7.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/8.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/9.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/10.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/11.jpg" class="slide" alt="img">
+                                    <img src="./img/main/main-slider/13.jpg" class="slide" alt="img">
+                                </div>
+                                <div class="dots"></div>                       
+                            </div>
+                            <div class="main-slider__next-btn">
+                                <img src="./img/main/main-slider/arrow.png" alt="arrow" class="main-slider__btn-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__slider-menu">
+                <div class="slider-menu__bg"><img src="./img/main/menu-slider/bg.jpg" alt="img" class="slider-menu__bg-img"></div>
+                <div class="slider-menu__container __container">
+                    <div class="slider-menu__inner">
+                        <div class="slider-menu__content">
+                            <div class="slider-menu__title">
+                                <h2 class="slider-menu__title-text">
+                                    <a href="#" class="slider-menu__title-link">Меню и цены</a>
+                                </h2>
+                            </div>
+                            <div class="slider-menu__subtitle">
+                                <p class="slider-menu__subtitle-text">
+                                    В основе меню — классика азербайджанской кухни. На закуску подают ассорти из маринадов, бастурму и фирменные салаты. На первое можно заказать окрошку на кефире, дюшбару и наваристый хаш. На горячее приготовят плов с бараниной, хинкали, долму и аджапсандали. Для тех, кто предпочитает европейскую кухню, есть раздел с пастой. Особое место в меню занимают блюда на огне: шашлыки из всех видов мяса, запечённая рыба, люля-кебаб — есть из чего выбрать.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slider-menu">
+                            <div class="slider-menu__prev-btn">
+                                <img src="./img/main/main-slider/arrow.png" alt="arrow" class="slider-menu__btn-img">
+                            </div>
+                            <div class="slider-menu-container">
+                                <div class="slider-menu__slider">
+                                    <img src="./img/main/menu-slider/slider-menu/1.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/2.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/3.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/4.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/5.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/6.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/7.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/8.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/9.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/10.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/11.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/13.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/14.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/15.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/16.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/17.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/18.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/19.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/20.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/21.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/22.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/23.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/24.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/25.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/26.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/27.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/28.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/29.jpg" class="slider-menu__slide" alt="img">
+                                    <img src="./img/main/menu-slider/slider-menu/30.jpg" class="slider-menu__slide" alt="img">
+                                </div>
+                                <div class="slider-menu__dots"></div>                       
+                            </div>
+                            <div class="slider-menu__next-btn">
+                                <img src="./img/main/main-slider/arrow.png" alt="arrow" class="slider-menu__btn-img">
+                            </div>
+                        </div>
+                        <div class="slider-dish">
+                            <div class="slider-dish__prev-btn">
+                                <img src="./img/main/main-slider/arrow.png" alt="arrow" class="slider-menu__btn-img">
+                            </div>
+                            <div class="slider-dish-container">
+                                <div class="slider-dish__slider">
+                                    <img src="./img/main/menu-slider/slider-dish/1.jpg" class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/2.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/3.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/4.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/5.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/6.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/7.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/8.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/9.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/10.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/11.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/12.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/13.jpg class="slider-dish__slide" alt="img">
+                                    <img src=./img/main/menu-slider/slider-dish/14.jpg class="slider-dish__slide" alt="img">
+                                </div>
+                                <div class="slider-dish__dots"></div>                       
+                            </div>
+                            <div class="slider-dish__next-btn">
+                                <img src="./img/main/main-slider/arrow.png" alt="arrow" class="slider-menu__btn-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__information">
+                <div class="information__container __container">
+                    <div class="information__inner">
+                        <div class="information__title">
+                            <h2 class="information__title-text">
+                            В кафе «Шкипер» комфортно отдыхать всей семьёй. Для детей есть специальные стульчики и меню, а иногда для маленьких гостей проводят весёлые праздники. Взрослые могут послушать живую музыку или отметить праздник узкой компанией — для этого есть уютная VIP-комната.
+                            </h2>
+                        </div>
+                        <div class="information__columns">
+                            <div class="information__column">
+                                <ul class="information__items">
+                                    <li class="information__item">
+                                        <p class="information__bold">Кухня: </p>
+                                        европейская, кавказская, русская
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Для детей: </p>
+                                        Стульчики, Детское меню, Праздники
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Летняя терраса: </p>
+                                        Есть
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Велопарковка: </p>
+                                        Есть
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Доставка: </p>
+                                        Есть
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="information__column">
+                                <ul class="information__items">
+                                    <li class="information__item">
+                                        <p class="information__bold">Шоу-программы: </p>
+                                        Уточнять при бронировании , Живая музыка под заказ
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Вегетарианское меню: </p>
+                                        Есть
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">VIP: </p>
+                                        12 мест
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Парковка: </p>
+                                        Бесплатная, Неохраняемая, Городская/Общая
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="information__column">
+                                <ul class="information__items">
+                                    <li class="information__item">
+                                        <p class="information__bold">Музыка: </p>
+                                        Фоновая
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Шеф-повар: </p>
+                                        Алыев Намиг Натигович
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">Залы и места: </p>
+                                        Основной зал — 65 мест, VIP-зал — 12 мест
+                                    </li>
+                                    <li class="information__item">
+                                        <p class="information__bold">ВГардероб: </p>
+                                        Есть
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="page__footer">
+                <div class="footer__container __container">
+                    <div class="footer__inner">
+                        © 2023 Все права защищены.
+                        Использование сайта означает <a href="#" class="footer__lnik">ваше согласие на обработку ПД</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/date.js"></script>
+</body>
+</html>

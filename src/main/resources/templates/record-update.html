@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Обновить запись</title>
+    <link rel="stylesheet" href="/css/admin_style.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <form action="#" th:action="@{/record-update}" th:object="${record}" method="post">
+            <div class="input-element" style="display: none;">
+                <label for="id">ID</label>
+                <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+            </div>
+
+            <div class="input-element">
+                <label for="firstName">Имя</label>
+                <input type="text" th:field="*{firstName}" id="firstName" placeholder="Имя">
+            </div>
+
+            <div class="input-element">
+                <label for="lastName">Фамилия</label>
+                <input type="text" th:field="*{lastName}" id="lastName" placeholder="Фамилия">
+            </div>
+            <div class="input-element">
+                <label for="phoneNumber">Номер телефона</label>
+                <input type="text" th:field="*{phoneNumber}" id="phoneNumber" placeholder="Номер телефона">
+            </div>
+            <div class="input-element">
+                <label for="personCount">Кол-во персон</label>
+                <input type="text" th:field="*{personCount}" id="personCount" placeholder="Кол-во персон">
+            </div>
+            <div class="input-element">
+                <label for="preferences">Пожелания</label>
+                <textarea wrap="soft" rows="3" type="text" th:field="*{preferences}" id="preferences"
+                    placeholder="Пожелания">
+                </textarea>
+            </div>
+            <div class="input-element">
+                <label for="date">Дата</label>
+                <input type="date" th:field="*{date}" id="date" placeholder="Дата">
+            </div>
+            <div class="input-element">
+                <label for="time">Время</label>
+                <select id="time" name="time" class="form__neader-select-time">
+                    <option value="2023-04-22 12:00:00" th:selected="${record.getTime() == '12:00:00'}">12:00</option>
+                    <option value="2023-04-22 12:30:00" th:selected="${record.getTime() == '12:30:00'}">12:30</option>
+                    <option value="2023-04-22 13:30:00" th:selected="${record.getTime() == '13:30:00'}">13:30</option>
+                    <option value="2023-04-22 13:00:00" th:selected="${record.getTime() == '13:00:00'}">13:00</option>
+                    <option value="2023-04-22 14:00:00" th:selected="${record.getTime() == '14:00:00'}">14:00</option>
+                    <option value="2023-04-22 14:30:00" th:selected="${record.getTime() == '14:30:00'}">14:30</option>
+                    <option value="2023-04-22 15:00:00" th:selected="${record.getTime() == '15:00:00'}">15:00</option>
+                    <option value="2023-04-22 15:30:00" th:selected="${record.getTime() == '15:30:00'}">15:30</option>
+                    <option value="2023-04-22 16:00:00" th:selected="${record.getTime() == '16:00:00'}">16:00</option>
+                    <option value="2023-04-22 16:30:00" th:selected="${record.getTime() == '16:30:00'}">16:30</option>
+                    <option value="2023-04-22 17:00:00" th:selected="${record.getTime() == '17:00:00'}">17:00</option>
+                    <option value="2023-04-22 17:30:00" th:selected="${record.getTime() == '17:30:00'}">17:30</option>
+                    <option value="2023-04-22 18:00:00" th:selected="${record.getTime() == '18:00:00'}">18:00</option>
+                    <option value="2023-04-22 18:30:00" th:selected="${record.getTime() == '18:30:00'}">18:30</option>
+                    <option value="2023-04-22 19:00:00" th:selected="${record.getTime() == '19:00:00'}">19:00</option>
+                    <option value="2023-04-22 19:30:00" th:selected="${record.getTime() == '19:30:00'}">19:30</option>
+                    <option value="2023-04-22 20:00:00" th:selected="${record.getTime() == '20:00:00'}">20:00</option>
+                    <option value="2023-04-22 20:30:00" th:selected="${record.getTime() == '20:30:00'}">20:30</option>
+                    <option value="2023-04-22 21:00:00" th:selected="${record.getTime() == '21:00:00'}">21:00</option>
+                    <option value="2023-04-22 21:30:00" th:selected="${record.getTime() == '21:30:00'}">21:30</option>
+                    <option value="2023-04-22 22:00:00" th:selected="${record.getTime() == '22:00:00'}">22:00</option>
+                </select>
+            </div>
+            <div class="input-element">
+                <label for="budget">Бюджет</label>
+                <input  th:field="*{budget}" id="budget"  type="number">
+            </div>
+            <div class="input-element">
+                <label for="email">Email</label>
+                <input th:field="*{email}" id="email" min="100" type="text">
+            </div>
+            <div class="input-element">
+                <label for="eventType">Событие</label>
+                <select id="eventType"  name="eventType">
+                    <option>не указано</option>
+                    <option th:selected="${record.getEventType() == 'свадьба'}" value="свадьба">свадьба</option>
+                    <option th:selected="${record.getEventType() == 'корпоратив'}" value="корпоратив">корпоратив</option>
+                    <option th:selected="${record.getEventType() == 'выпускной'}" value="выпускной">выпускной</option>
+                    <option th:selected="${record.getEventType() == 'день рождения'}" value="день рождения">день рождения</option>
+                    <option th:selected="${record.getEventType() == 'детский праздник'}" value="детский праздник">детский праздник</option>
+                    <option th:selected="${record.getEventType() == 'тематическая вечеринка'}" value="тематическая вечеринка">тематическая вечеринка</option>
+                    <option th:selected="${record.getEventType() == 'конференция, презентация'}" value="конференция, презентация">конференция, презентация</option>
+                    <option th:selected="${record.getEventType() == 'туристическая группа'}" value="туристическая группа">туристическая группа</option>
+                </select>
+            </div>
+            <div class="input-element">
+                <input type="submit" value="Обновить запись">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

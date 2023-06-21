@@ -1,0 +1,81 @@
+body {
+    font-family: Arial;
+}
+table {
+    table-layout:fixed;
+    margin: 0 auto;
+}
+
+table td {
+    overflow:hidden;
+}
+
+td {
+    word-break: break-all;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.create-link {
+    text-align: center;
+    background-color: black;
+    width: 15%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.edit-btn {
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/edit.png');
+    margin: 0 auto;
+}
+
+.del-btn {
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/delete.png');
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+.form-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: #6262C4;
+    color: #fff;
+    padding: 40px;
+    border-radius: 7%;
+}
+
+input {
+    width: 100%;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+textarea {
+    width: 100%;
+}
+
+.input-element {
+    margin: 20px;
+}

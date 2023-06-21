@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create record</title>
+    <link rel="stylesheet" href="css/admin_style.css">
+</head>
+<body>
+<div class="form-wrapper">
+    <h1>Создать запись</h1>
+    <form action="#" th:action="@{/record-create}" th:object="${record}" method="post">
+
+        <div class="input-element">
+            <label for="firstName">Имя</label>
+            <input type="text" th:field="*{firstName}" id="firstName" placeholder="Имя">
+        </div>
+
+        <div class="input-element">
+            <label for="lastName">Фамилия</label>
+            <input type="text" th:field="*{lastName}" id="lastName" placeholder="Фамилия">
+        </div>
+        <div class="input-element">
+            <label for="phoneNumber">Номер телефона</label>
+            <input type="text" th:field="*{phoneNumber}" id="phoneNumber" placeholder="Номер телефона">
+        </div>
+        <div class="input-element">
+            <label for="personCount">Кол-во персон</label>
+            <input type="text" th:field="*{personCount}" id="personCount" placeholder="Кол-во персон">
+        </div>
+        <div class="input-element">
+            <label for="preferences">Пожелания</label>
+            <textarea wrap="soft" rows="3" maxlength="299" type="text" th:field="*{preferences}" id="preferences" placeholder="Пожелания">
+            </textarea>
+        </div>
+        <div class="input-element">
+            <label for="date">Дата</label>
+            <div class="date">
+                <input type="date" th:field="*{date}" id="date" class="form__neader-input-date">
+            </div>
+        </div>
+        <div class="input-element">
+            <label for="time">Время</label>
+            <select th:field="*{time}" id="time" class="form__neader-select-time">
+                <option value="2023-04-22 12:00:00">12:00</option>
+                <option value="2023-04-22 12:30:00">12:30</option>
+                <option value="2023-04-22 13:00:00">13:00</option>
+                <option value="2023-04-22 13:30:00">13:30</option>
+                <option value="2023-04-22 14:00:00">14:00</option>
+                <option value="2023-04-22 14:30:00">14:30</option>
+                <option value="2023-04-22 15:00:00">15:00</option>
+                <option value="2023-04-22 15:30:00">15:30</option>
+                <option value="2023-04-22 16:00:00">16:00</option>
+                <option value="2023-04-22 16:30:00">16:30</option>
+                <option value="2023-04-22 17:00:00">17:00</option>
+                <option value="2023-04-22 17:30:00">17:30</option>
+                <option value="2023-04-22 18:00:00">18:00</option>
+                <option value="2023-04-22 18:30:00">18:30</option>
+                <option value="2023-04-22 19:00:00">19:00</option>
+                <option value="2023-04-22 19:30:00">19:30</option>
+                <option value="2023-04-22 20:00:00">20:00</option>
+                <option value="2023-04-22 20:30:00">20:30</option>
+                <option value="2023-04-22 21:00:00">21:00</option>
+                <option value="2023-04-22 21:30:00">21:30</option>
+                <option value="2023-04-22 22:00:00">22:00</option>
+            </select>
+        </div>
+        <div class="input-element">
+            <label for="budget">Бюджет</label>
+            <input  th:field="*{budget}" id="budget" min="100" type="number">
+        </div>
+        <div class="input-element">
+            <label for="email">Email</label>
+            <input th:field="*{email}" id="email" min="100" type="text">
+        </div>
+        <div class="input-element">
+            <label for="eventType">Событие</label>
+            <select th:field="*{eventType}" id="eventType">
+                <option selected="selected" value="">не указано</option>
+                <option value="свадьба">свадьба</option>
+                <option value="корпоратив">корпоратив</option>
+                <option value="выпускной">выпускной</option>
+                <option value="день рождения">день рождения</option>
+                <option value="детский праздник">детский праздник</option>
+                <option value="тематическая вечеринка">тематическая вечеринка</option>
+                <option value="конференция, презентация">конференция, презентация</option>
+                <option value="туристическая группа">туристическая группа</option>
+            </select>
+        </div>
+        <div class="input-element">
+            <input type="submit" value="СОЗДАТЬ ЗАПИСЬ">
+        </div>
+
+    </form>
+</div>
+
+<script src="/js/date.js"></script>
+
+</body>
+</html>

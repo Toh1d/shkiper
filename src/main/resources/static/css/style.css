@@ -1,0 +1,214 @@
+/* ------------------------------------------------------------------------ */
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/* ---------------------------------------------------------------------------- */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+    /* overflow-x: hidden; */
+}
+.__container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.header {
+    margin: 0px 0px 40px 0px;
+    position: relative;
+}
+.page__header {
+    position: relative;
+    z-index: 23;
+}
+.page__header::after{
+    content: '';
+
+    pointer-events: none;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+.header__container {
+}
+.header__inner {
+}
+.nav {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__items {
+    /* margin-bottom: ; */
+    display: flex;
+}
+.header__item {
+}
+.header__item-link {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 15px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ccc;
+    transition: all .1s ease;
+}
+.header__item-link:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ---------------------burger-menu----------------------------- */
+
+.burger__menu {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background: rgba(0,0,0,0.85);
+    z-index: -1;
+    transition: all .2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.hide{
+    pointer-events:all;
+    opacity: 1;
+    z-index: 22;
+    transition: all .2s ease;
+}
+.overflow-hide{
+    overflow: hidden;
+}
+.burger__nav {
+    padding: 100px 0px 0px 0px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.burger__items {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.burger__item {
+    padding: 0px 0px 30px 0px;
+}
+.burger__item-link {
+    font-size: 20px;
+    line-height: 1.2em;
+    color: #fff;
+    transition: all .1s ease;
+}
+.burger__item-link:hover{
+    text-decoration: underline;
+}
+
+/* ------------------------burger-btn--------------------------- */
+
+.burger {
+    position: absolute;
+    top:0;
+    right: 0%;
+    width:100%;
+    height:100%;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    margin: 0px 10px 0px 0px;
+    z-index: 2123;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.b1, .b2, .b3 {
+    width: 20px;
+    height: 3px;
+    background-color: rgb(165, 162, 162);
+    margin: 2px 0;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+
+.change .b1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .b3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .b2 {opacity: 0;}
+
+
+/* ------------------footer-------------------- */
+
+.footer {
+}
+.page__footer {
+    background-color: #000;
+}
+.footer__container {
+}
+.footer__inner {
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+}
+.footer__lnik {
+    color: #fff;
+}
+
+

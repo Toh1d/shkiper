@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Records</title>
+        <link rel="stylesheet" href="css/admin_style.css">
+    </head>
+    <body>
+    <style>
+        body {
+            background-image: url('../img/main/bg.jpg');
+        }
+        table {
+            background: #fff;
+        }
+        h1 {
+            color:#fff;
+        }
+    </style>
+    <div th:switch="${records}">
+        <h2 th:case="null">No users found!</h2>
+        <div th:case="*">
+            <h1>Бронирования</h1>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <col style="width:3%">
+                <col style="width:7%">
+                <col style="width:7%">
+                <col style="width:10%">
+                <col style="width:3%">
+                <col style="width:25%">
+                <col style="width:10%">
+                <col style="width:9%">
+                <col style="width:5%">
+                <col style="width:11%">
+                <col style="width:7%">
+                <col style="width:5%">
+                <col style="width:2%">
+                <col style="width:2%">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Номер телефона</th>
+                        <th>Кол-во персон</th>
+                        <th>Пожелания</th>
+                        <th>Время</th>
+                        <th>Дата</th>
+                        <th>Бюджет</th>
+                        <th>Email</th>
+                        <th>Событие</th>
+                    </tr>
+                </thead>
+                <tbody>
+               <tr th:each="record,index : ${records}">
+                    <td th:text="${index.count}"></td>
+                    <td th:text="${record.firstName}"></td>
+                    <td th:text="${record.lastName}"></td>
+                    <td th:text="${record.phoneNumber}"></td>
+                    <td th:text="${record.personCount}"></td>
+                    <td th:text="${record.preferences}" width="100"></td>
+                    <td th:text="${record.time}"></td>
+                    <td th:text="${record.date}"></td>
+                    <td th:text="${record.budget}"></td>
+                    <td th:text="${record.email}"></td>
+                    <td th:text="${record.eventType}"></td>
+                    <td>
+                        <a th:href="@{record-update/{id}(id=${record.id})}">
+                            <div class="edit-btn"></div>
+                        </a>
+                    </td>
+                    <td>
+                        <a th:href="@{record-delete/{id}(id=${record.id})}">
+                            <div class="del-btn"></div>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="create-link">
+                <a href="/record-create">Создать запись</a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        async function getRecords() {
+            const req = await fetch("/api/get-records",{
+                method:"POST"
+            })
+            const res = await req.json()
+            const table = await document.querySelectorAll("table tbody tr")
+            await table.forEach(element => {
+                element.remove()
+            })
+            await res.records.forEach((record,index) => {
+                document.querySelector("table tbody").innerHTML += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${record.firstName}</td>
+                    <td>${record.lastName}</td>
+                    <td>${record.phoneNumber}</td>
+                    <td>${record.personCount}</td>
+                    <td width="100">${record.preferences}</td>
+                    <td>${record.time}</td>
+                    <td>${record.date}</td>
+                    <td>${record.budget ? record.budget : ""}</td>
+                    <td>${record.email ? record.email : ""}</td>
+                    <td>${record.eventType ? record.eventType : ""}</td>
+                    <td>
+                        <a href="/record-update/${record.id}">
+                            <div class="edit-btn"></div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/record-delete/${record.id}">
+                            <div class="del-btn"></div>
+                        </a>
+                    </td>
+                </tr>`
+            });
+        }
+        setInterval(getRecords, 5000)
+    </script>
+    </body>
+</html>
